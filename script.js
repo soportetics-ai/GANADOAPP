@@ -44,12 +44,11 @@ function openTab(category) {
     const div = document.createElement("div");
     div.classList.add("animal-item");
 
-    // Clases dinámicas para colores
     const estadoClass = animal.estado.toLowerCase();
     const comentarioClass = animal.comentario.toLowerCase();
 
     div.innerHTML = `
-      <img src="${animal.img}" alt="${animal.code}">
+      <img src="${animal.img}" alt="${animal.code}" onclick="openModal('${animal.img}')">
       <div class="animal-info">
         <span class="animal-code">${animal.code}</span>
       </div>
@@ -60,6 +59,19 @@ function openTab(category) {
     `;
     content.appendChild(div);
   });
+}
+
+// Modal
+function openModal(src) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
 }
 
 // Mostrar primera pestaña por defecto
