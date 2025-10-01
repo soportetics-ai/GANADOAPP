@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+/* Tabs */
+header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.tabs {
+  display: flex;
+  overflow-x: auto;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  font-size: 0.9rem;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  border-bottom: 3px solid #4CAF50;
+  font-weight: bold;
+}
+
+.tab:hover {
+  background: #f2f2f2;
+}
+
+/* Contenido */
+main {
+  padding: 15px;
+}
+
+.animal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.animal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.animal-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.animal-info {
+  flex: 1;
+  text-align: left;
+}
+
+.animal-code {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.animal-status {
+  text-align: right;
+}
+
+.estado {
+  display: block;
+  font-weight: bold;
+}
+
+.estado.disponible {
+  color: #4CAF50; /* verde */
+}
+
+.estado.vendido {
+  color: #E53935; /* rojo */
+}
+
+.comentario {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.comentario.sano {
+  color: #388E3C; /* verde oscuro */
+}
+
+.comentario.enfermo {
+  color: #F9A825; /* amarillo */
+}

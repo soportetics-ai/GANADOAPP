@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Ganado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="tabs">
+      <button class="tab active" onclick="openTab('ternerosM')">🐂 Terneros Machos</button>
+      <button class="tab" onclick="openTab('ternerasH')">🐄 Terneras Hembras</button>
+      <button class="tab" onclick="openTab('toro')">🐃 Toro</button>
+      <button class="tab" onclick="openTab('vaca')">🐮 Vaca</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="content" class="animal-list"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
